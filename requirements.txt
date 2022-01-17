@@ -1,7 +1,5 @@
 pyTelegramBotApi
 threaded
 xlsxwriter
-sqlite3
-os
 flask
 gunicorn
