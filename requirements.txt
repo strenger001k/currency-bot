@@ -1,0 +1,8 @@
+pyTelegramBotApi
+threading
+time
+xlsxwriter
+sqlite3
+os
+flask
+gunicorn
