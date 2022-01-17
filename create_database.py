@@ -3,7 +3,7 @@ import sqlite3
 
 
 def creat_table():
-    if not os.path.exists('chek.db'):
+    if not os.path.exists('database.db'):
         table = """CREATE TABLE User (
                                         id           INTEGER PRIMARY KEY ASC
                                                              UNIQUE
@@ -18,7 +18,7 @@ def creat_table():
                                         is_scheduler BOOLEAN DEFAULT (False)
                                                              NOT NULL
                                      )"""
-        conn = sqlite3.connect('chek.db', check_same_thread=False)
+        conn = sqlite3.connect('database.db', check_same_thread=False)
         cursor_obj = conn.cursor()
         cursor_obj.execute(table)
         print("===DataBase created===")

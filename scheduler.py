@@ -23,7 +23,7 @@ def job(message, bot):
 
 def start_scheduler(message, bot):
     global th
-    th = RepeatTimer(10800, job, args=(message, bot, ))
+    th = RepeatTimer(1800, job, args=(message, bot, ))
     th.start()
 
 
