@@ -1,6 +1,5 @@
 pyTelegramBotApi
 threaded
-time
 xlsxwriter
 sqlite3
 os
