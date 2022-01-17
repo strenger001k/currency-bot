@@ -1,4 +1,3 @@
-from http.client import CONTINUE
 from telebot import types
 from config import ADMIN
 import db
