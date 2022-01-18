@@ -310,7 +310,3 @@ def get_file(message):
     with open('database.xlsx', 'rb') as file_send:
         bot.send_document(message.chat.id, file_send)
     admin_menu(message)
-
-
-if __name__ == '__main__':
-    bot.polling(none_stop=True, interval=0)
