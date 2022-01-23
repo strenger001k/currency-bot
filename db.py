@@ -3,7 +3,7 @@ from config import DB_URI
 import messages
 import psycopg2
 
-conn = psycopg2.connect(DB_URI, check_same_thread=False)
+conn = psycopg2.connect(DB_URI, sslmode='require')
 cursor = conn.cursor()
 
 
