@@ -3,3 +3,4 @@ threaded
 xlsxwriter
 flask
 gunicorn
+psycopg2
