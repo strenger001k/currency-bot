@@ -8,7 +8,7 @@ cursor = conn.cursor()
 
 
 def create_user(user_id: int, username: str, user_name: str, user_surname: str):
-    cursor.execute('INSERT INTO Users (user_id, username, user_name, user_surname) VALUES (?, ?, ?, ?)',
+    cursor.execute('INSERT INTO Users (user_id, username, user_name, user_surname) VALUES (%d, %s, %s, %s)',
                    (user_id, username, user_name, user_surname))
     conn.commit()
 
