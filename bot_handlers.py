@@ -15,6 +15,9 @@ def send_welcome(message):
     if message.chat.id == ADMIN_CHAT:
         admin_menu(message)
     else:
+        bot.send_message(message.chat.id,
+                                 HELLO_AGAIN_MESSAGE,
+                                 reply_markup=remove_keyboard())
         if check_registration(message.from_user.id):
             if not is_block(message.from_user.id):
                 bot.send_message(message.chat.id,
