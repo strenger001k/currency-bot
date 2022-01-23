@@ -13,17 +13,17 @@ class RepeatTimer(Timer):
 def job(message, bot):
     bot.send_message(message.chat.id, get_currency_value(USD))
     time.sleep(0.3)
-    bot.send_message(message.chat.id, get_currency_value(EUR))
+    bot.send_message(message.chat.id, get_currency_value(EUR), disable_notification=True)
     time.sleep(0.3)
-    bot.send_message(message.chat.id, get_currency_value(RUR))
+    bot.send_message(message.chat.id, get_currency_value(RUR), disable_notification=True)
     time.sleep(0.3)
-    bot.send_message(message.chat.id, get_currency_value(BTC))
+    bot.send_message(message.chat.id, get_currency_value(BTC), disable_notification=True)
     time.sleep(0.1)
 
 
 def start_scheduler(message, bot):
     global th
-    th = RepeatTimer(7200, job, args=(message, bot, ))
+    th = RepeatTimer(1000, job, args=(message, bot, ))
     th.start()
 
 
