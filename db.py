@@ -1,8 +1,9 @@
-import sqlite3
 from xlsxwriter.workbook import Workbook
+from config import DB_URI
 import messages
+import psycopg2
 
-conn = sqlite3.connect('database.db', check_same_thread=False)
+conn = psycopg2.connect(DB_URI, check_same_thread=False)
 cursor = conn.cursor()
 
 
