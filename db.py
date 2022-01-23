@@ -1,7 +1,5 @@
 from xlsxwriter.workbook import Workbook
-from config import DB_URI
 import messages
-import psycopg2
 import sqlite3
 
 # conn = psycopg2.connect(DB_URI, sslmode="require")
