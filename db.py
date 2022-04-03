@@ -6,7 +6,7 @@ conn = sqlite3.connect('database.db', check_same_thread=False)
 cursor = conn.cursor()
 
 def create_user(user_id: int, username: str, user_name: str, user_surname: str):
-    cursor.execute('INSERT INTO Users (user_id, username, user_name, user_surname) VALUES (?, ?, ?, ?)',
+    cursor.execute('INSERT INTO User (user_id, username, user_name, user_surname) VALUES (?, ?, ?, ?)',
                    (user_id, username, user_name, user_surname))
     conn.commit()
 
